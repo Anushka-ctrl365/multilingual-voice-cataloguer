@@ -96,7 +96,7 @@ The generated catalog organizes the artisan's information into useful product fi
                   ▼             ▼
             Hindi Output   English Output
 
-
+```
 ## 🗣️ Language Support
 
 | Input Language | Output Language |
@@ -126,7 +126,7 @@ Text
 
 When required, the recognized text is translated using IndicTrans2.
 
-Gujarati / Marathi
+Gujarati / Marathi / Hindi
         ↓
     IndicTrans2
         ↓
