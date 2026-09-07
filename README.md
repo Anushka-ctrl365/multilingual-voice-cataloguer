@@ -150,23 +150,31 @@ Structured Catalog
 ```
 
 ## 🛠️ Technology Stack
-Frontend
-React
-Vite
-JavaScript
-CSS
-Lucide React Icons
-Backend
-Python
-FastAPI
-Faster-Whisper
-IndicTrans2
-AI/LLM-based catalog generation
-Testing
-Pytest
-FastAPI Test Client
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Lucide React Icons
+
+### Backend
+
+- Python
+- FastAPI
+- Faster-Whisper
+- IndicTrans2
+- AI/LLM-based catalog generation
+
+### Testing
+
+- Pytest
+- FastAPI Test Client
 
 ## 📁 Project Structure
+
+```text
 multilingual-voice-cataloguer/
 │
 ├── backend/
@@ -224,7 +232,9 @@ multilingual-voice-cataloguer/
 │
 ├── .gitignore
 └── README.md
-🚀 Installation & Setup
+```
+
+## 🚀 Installation & Setup
 Prerequisites
 
 Before running the project, install:
