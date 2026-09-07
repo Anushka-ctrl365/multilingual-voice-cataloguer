@@ -235,15 +235,18 @@ multilingual-voice-cataloguer/
 ```
 
 ## 🚀 Installation & Setup
-Prerequisites
+
+### Prerequisites
 
 Before running the project, install:
 
-Python 3.10 or newer
-Node.js and npm
-Git
+- Python 3.10 or newer
+- Node.js and npm
+- Git
 
 You also need an internet connection during the initial setup so that Python and frontend dependencies can be downloaded.
+
+---
 
 ## ⚙️ Backend Setup
 
@@ -251,123 +254,170 @@ Open a terminal in the project directory.
 
 Navigate to the backend:
 
+```bash
 cd backend
-1. Create a Virtual Environment
-Windows
+```
+
+### 1. Create a Virtual Environment
+
+#### Windows
+
+```bash
 python -m venv venv
+```
 
 Activate it:
 
+```bash
 venv\Scripts\activate
+```
 
 After activation, your terminal should show something similar to:
 
+```text
 (venv)
-2. Install Python Dependencies
+```
+
+### 2. Install Python Dependencies
 
 Run:
 
+```bash
 pip install -r requirements.txt
+```
 
 This installs the required backend libraries, including the speech recognition, translation, API, and testing dependencies.
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 
 The repository contains:
 
+```text
 backend/.env.example
+```
 
 Create a new file named:
 
+```text
 backend/.env
+```
 
-Copy the required configuration from .env.example into .env.
+Copy the required configuration from `.env.example` into `.env`.
 
-The .env file is intentionally excluded from GitHub using .gitignore.
+The `.env` file is intentionally excluded from GitHub using `.gitignore`.
 
-Do not upload API keys or other private credentials to GitHub.
+> Do not upload API keys or other private credentials to GitHub.
 
-4. Start the Backend
+### 4. Start the Backend
 
 From the backend directory, run:
 
+```bash
 python -m uvicorn main:app --reload
+```
 
 If the backend starts successfully, it will be available at:
 
+```text
 http://127.0.0.1:8000
+```
 
 FastAPI API documentation is available at:
 
+```text
 http://127.0.0.1:8000/docs
+```
 
 Keep this terminal running.
 
-💻 Frontend Setup
+---
+
+## 💻 Frontend Setup
 
 Open a second terminal.
 
 Navigate to the frontend directory:
 
+```bash
 cd frontend
-1. Install Frontend Dependencies
+```
+
+### 1. Install Frontend Dependencies
 
 Run:
 
+```bash
 npm install
+```
 
 This installs all required React and frontend dependencies.
 
-2. Start the Frontend
+### 2. Start the Frontend
 
 Run:
 
+```bash
 npm run dev
+```
 
 The frontend will normally be available at:
 
+```text
 http://127.0.0.1:5173
+```
 
 Open that address in a browser.
 
-▶️ Running the Complete Application
+---
+
+## ▶️ Running the Complete Application
 
 Two terminals should be running simultaneously.
 
-Terminal 1 — Backend
+### Terminal 1 — Backend
+
+```bash
 cd backend
 venv\Scripts\activate
 python -m uvicorn main:app --reload
-Terminal 2 — Frontend
+```
+
+### Terminal 2 — Frontend
+
+```bash
 cd frontend
 npm run dev
+```
 
 Then open the frontend in your browser:
 
+```text
 http://127.0.0.1:5173
+```
 
 The backend API documentation can be accessed through:
 
+```text
 http://127.0.0.1:8000/docs
+```
+
+---
+
 ## 🎤 User Flow
 
 The module follows a simple voice-first workflow:
 
 1. Select Input Language
-          ↓
 2. Speak or Upload Audio
-          ↓
 3. Process Audio
-          ↓
 4. Speech Converted to Text
-          ↓
 5. Translation / Text Processing
-          ↓
 6. AI Generates Catalog
-          ↓
 7. View Hindi & English Catalog
 
 This minimizes the amount of typing required from the artisan.
+
+---
 
 ## 🎯 Purpose
 
@@ -379,35 +429,41 @@ The system processes the speech and generates a structured product catalog in Hi
 
 This makes catalog creation faster, simpler, and more accessible for artisans participating in digital commerce.
 
+---
 
 ## 👩‍💻 Module Focus
-Input
 
-🎙️ Hindi speech
-🎙️ Gujarati speech
-🎙️ Marathi speech
-📁 Uploaded audio files
+### Input
 
-Processing
+- 🎙️ Hindi speech
+- 🎙️ Gujarati speech
+- 🎙️ Marathi speech
+- 📁 Uploaded audio files
 
-🗣️ Speech-to-Text
-🔄 Multilingual Translation
-🤖 AI-based Catalog Generation
+### Processing
 
-Output
+- 🗣️ Speech-to-Text
+- 🔄 Multilingual Translation
+- 🤖 AI-based Catalog Generation
 
-🇮🇳 Hindi Product Catalog
-🇬🇧 English Product Catalog
+### Output
+
+- 🇮🇳 Hindi Product Catalog
+- 🇬🇧 English Product Catalog
+
+---
 
 ## 📌 Future Improvements
 
 Potential future enhancements include:
 
-Support for additional Indian languages
-Improved speech recognition for regional accents
-Offline or edge-based speech processing
-More customizable catalog fields
-Integration with online artisan marketplaces
-Voice-based editing of generated catalogs
+- Support for additional Indian languages
+- Improved speech recognition for regional accents
+- Offline or edge-based speech processing
+- More customizable catalog fields
+- Integration with online artisan marketplaces
+- Voice-based editing of generated catalogs
+- Improved handling of noisy audio recordings
+- Improved multilingual speech recognition accuracy
 Improved handling of noisy audio recordings
 Improved multilingual speech recognition accuracy
