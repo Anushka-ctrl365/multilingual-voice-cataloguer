@@ -465,5 +465,3 @@ Potential future enhancements include:
 - Voice-based editing of generated catalogs
 - Improved handling of noisy audio recordings
 - Improved multilingual speech recognition accuracy
-Improved handling of noisy audio recordings
-Improved multilingual speech recognition accuracy
