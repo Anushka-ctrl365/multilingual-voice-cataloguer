@@ -1,399 +1,416 @@
-# 🎙️ Multilingual Voice Cataloguer
+Multilingual Voice Cataloguer
 
-An AI-powered voice-based catalog creation module designed to help artisans create digital product catalogs without needing to type.
+An AI-powered voice-first catalog creation module designed for artisans and micro-entrepreneurs who may find typing difficult or inconvenient.
 
-The system allows artisans to describe their products through voice input or uploaded audio in **Hindi, Gujarati, or Marathi**. The speech is converted into text, translated when required, and transformed into a structured product catalog in **Hindi and English**.
+The application lets an artisan speak or upload an audio file describing a product in Hindi, Gujarati, or Marathi. The system converts the speech into text, translates it when required, and generates a structured product catalog in Hindi and English.
 
----
+🌟 Overview
 
-## 🌟 Overview
+Creating a digital product catalog can be difficult for artisans because it may require:
 
-Many artisans have valuable traditional products and stories but face difficulties creating digital catalogs because of:
+Typing product information
 
-- Limited digital literacy
-- Difficulty typing product information
-- Language barriers
-- Lack of technical knowledge for creating product descriptions
-- Difficulty preparing standardized product information for online platforms
+Writing product descriptions
 
-The **Multilingual Voice Cataloguer** addresses this problem through a simple voice-first interface.
+Knowing English
 
-An artisan can simply speak about their product, and the system processes the input and generates a structured catalog that can be used for digital commerce.
+Structuring information into catalog fields
 
----
+Using technical e-commerce tools
 
-## ✨ Key Features
+This module provides a simple voice-first interface so an artisan can describe a product naturally.
 
-### 🎙️ Voice-Based Catalog Creation
+Basic Flow
 
-Artisans can describe their product naturally through speech instead of manually typing product details.
+Voice / Audio → Speech-to-Text → Translation → AI Catalog Generation → Hindi + English Catalog
 
-### 📁 Audio File Upload
+✨ Key Features
 
-Users can upload a previously recorded audio file in addition to using live microphone recording.
+🎙️ Voice-First Catalog Creation
 
-### 🌐 Multilingual Input
+The artisan can describe their product using their voice instead of typing.
 
-The system supports three input languages:
+📁 Audio File Upload
 
-- 🇮🇳 Hindi
-- 🇮🇳 Gujarati
-- 🇮🇳 Marathi
+The application supports uploading a recorded audio file in addition to live microphone input.
 
-### 🔄 Automatic Translation
+🌐 Multilingual Input
 
-Multilingual speech is processed and translated into the required output language using an AI-based translation pipeline.
+The system accepts speech in:
 
-### 🤖 AI-Powered Catalog Generation
+🇮🇳 Hindi
 
-The processed product description is converted into structured catalog information using an AI/LLM-based catalog generation module.
+🇮🇳 Gujarati
 
-### 🇮🇳 Hindi Catalog
+🇮🇳 Marathi
 
-The system can generate the final product catalog in Hindi.
+📝 Bilingual Output
 
-### 🇬🇧 English Catalog
+Generated catalog information is available in:
 
-The system can generate the final product catalog in English, making the information more accessible for digital marketplaces and broader audiences.
+🇮🇳 Hindi
 
-### 📋 Structured Product Information
+🇬🇧 English
 
-The generated catalog organizes the artisan's information into useful product fields such as:
+🤖 AI-Based Catalog Generation
 
-- Product name
-- Product description
-- Category
-- Materials
-- Craft details
-- Traditional information
-- Other relevant product attributes
+The system converts an unstructured spoken description into structured product information such as:
 
----
+Product name
 
-# 🔄 System Workflow
+Product description
 
-```text
-              Voice Input / Audio File
-                         │
-                         ▼
-                 Speech-to-Text
-                Whisper / Faster-Whisper
-                         │
-                         ▼
-                   Text Processing
-                         │
-                         ▼
-                Translation Pipeline
-                     IndicTrans2
-                         │
-                         ▼
-                 AI Catalog Generator
-                         │
-                         ▼
-             Structured Product Catalog
-                         │
-                  ┌──────┴──────┐
-                  ▼             ▼
-            Hindi Output   English Output
+Category
+
+Materials
+
+Price
+
+Dimensions
+
+Craft details
+
+Other relevant product attributes
+
+🔄 Translation Support
+
+If the spoken language differs from the desired catalog language, the system can translate the content before generating the final catalog.
+
+🎨 Simple Artisan-Friendly Interface
+
+The frontend focuses on a clean and accessible workflow with minimal typing and a straightforward voice/upload interaction.
+
+🔄 Workflow
+
+             ┌──────────────────────┐
+             │   Artisan speaks     │
+             │   or uploads audio   │
+             └──────────┬───────────┘
+                        │
+                        ▼
+             ┌──────────────────────┐
+             │   Speech-to-Text     │
+             │  Faster-Whisper      │
+             └──────────┬───────────┘
+                        │
+                        ▼
+             ┌──────────────────────┐
+             │     Translation      │
+             │     IndicTrans2      │
+             └──────────┬───────────┘
+                        │
+                        ▼
+             ┌──────────────────────┐
+             │   AI Catalog         │
+             │     Generation       │
+             └──────────┬───────────┘
+                        │
+                        ▼
+          ┌──────────────────────────────┐
+          │   Structured Product Catalog │
+          │       Hindi + English        │
+          └──────────────────────────────┘
+
 🗣️ Language Support
-Input Language	Output Language
-Hindi 🇮🇳	Hindi 🇮🇳
-Hindi 🇮🇳	English 🇬🇧
-Gujarati 🇮🇳	Hindi 🇮🇳
-Gujarati 🇮🇳	English 🇬🇧
-Marathi 🇮🇳	Hindi 🇮🇳
-Marathi 🇮🇳	English 🇬🇧
+
+Input Language
+
+Output Language
+
+Hindi 🇮🇳
+
+Hindi 🇮🇳
+
+Hindi 🇮🇳
+
+English 🇬🇧
+
+Gujarati 🇮🇳
+
+Hindi 🇮🇳
+
+Gujarati 🇮🇳
+
+English 🇬🇧
+
+Marathi 🇮🇳
+
+Hindi 🇮🇳
+
+Marathi 🇮🇳
+
+English 🇬🇧
+
 🧠 AI Pipeline
 
-The module uses a multi-stage AI pipeline.
+The module combines speech recognition, translation, and structured AI generation.
 
 1. Speech-to-Text
 
-The artisan's voice input is converted into text using Whisper / Faster-Whisper.
+Faster-Whisper is used to convert spoken audio into text.
 
-Audio
-  ↓
-Speech Recognition
-  ↓
-Text
+It supports the application's multilingual voice input workflow.
+
 2. Translation
 
-When required, the recognized text is translated using IndicTrans2.
+IndicTrans2 is used when translation is required between the supported Indian languages and English.
 
-Gujarati / Marathi
-        ↓
-    IndicTrans2
-        ↓
-Hindi / English
 3. Catalog Generation
 
-The processed text is passed to the catalog generation component, which extracts relevant product information and produces a structured catalog.
+The processed text is sent to the AI catalog-generation layer, which extracts important product information and organizes it into structured fields.
 
-Product Description
-        ↓
-   AI Processing
-        ↓
-Structured Catalog
-🛠️ Technology Stack
+4. Final Output
+
+The generated information is presented as a clean product catalog in Hindi and English.
+
+🛠️ Tech Stack
+
 Frontend
+
 React
+
 Vite
+
 JavaScript
+
 CSS
-Lucide React Icons
+
 Backend
+
 Python
+
 FastAPI
+
+Uvicorn
+
+AI / ML
+
 Faster-Whisper
+
 IndicTrans2
-AI/LLM-based catalog generation
-Testing
-Pytest
-FastAPI Test Client
+
+LLM-based structured catalog generation
+
+Development
+
+Git
+
+GitHub
+
+REST API
+
+Swagger / OpenAPI
+
 📁 Project Structure
+
 multilingual-voice-cataloguer/
 │
 ├── backend/
-│   ├── api/
-│   │   └── routes/
-│   │       └── catalog.py
-│   │
-│   ├── config/
-│   │   └── settings.py
-│   │
-│   ├── schemas/
-│   │   └── catalog.py
-│   │
-│   ├── services/
-│   │   ├── speech_to_text.py
-│   │   ├── translation.py
-│   │   ├── pipeline.py
-│   │   └── catalog_generator.py
-│   │
-│   ├── utils/
-│   │   └── audio.py
-│   │
-│   ├── tests/
-│   │   ├── test_api.py
-│   │   ├── test_audio_utils.py
-│   │   ├── test_catalog_generator.py
-│   │   └── test_translation.py
-│   │
-│   ├── sample_audio/
 │   ├── main.py
 │   ├── requirements.txt
-│   └── .env.example
+│   ├── .env.example
+│   └── ...
 │
 ├── frontend/
-│   ├── public/
-│   │   └── sample_audio/
-│   │
 │   ├── src/
-│   │   ├── api/
-│   │   ├── components/
-│   │   │   ├── AudioRecorder.jsx
-│   │   │   ├── AudioUploader.jsx
-│   │   │   ├── CatalogView.jsx
-│   │   │   ├── LanguageSelector.jsx
-│   │   │   ├── SampleAudioPicker.jsx
-│   │   │   ├── StatusTracker.jsx
-│   │   │   └── TextInputDrawer.jsx
-│   │   │
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   │
 │   ├── package.json
-│   └── vite.config.js
+│   └── ...
+│
+├── temp_audio/
+│   └── ...
 │
 ├── .gitignore
 └── README.md
-🚀 Installation & Setup
-Prerequisites
 
-Before running the project, install:
+temp_audio/, environment files, caches, and other local/generated files should not be committed to Git.
 
-Python 3.10 or newer
-Node.js and npm
-Git
+🚀 Getting Started
 
-You also need an internet connection during the initial setup so that Python and frontend dependencies can be downloaded.
+Follow these steps to run the project locally.
 
-⚙️ Backend Setup
+1. Clone the Repository
 
-Open a terminal in the project directory.
+git clone https://github.com/Anushka-ctrl365/multilingual-voice-cataloguer.git
+cd multilingual-voice-cataloguer
 
-Navigate to the backend:
+2. Backend Setup
 
-cd backend
-1. Create a Virtual Environment
+Open a terminal in the project root.
+
+Create and activate a Python virtual environment:
+
 Windows
+
 python -m venv venv
-
-Activate it:
-
 venv\Scripts\activate
 
-After activation, your terminal should show something similar to:
+macOS / Linux
 
-(venv)
-2. Install Python Dependencies
+python3 -m venv venv
+source venv/bin/activate
 
-Run:
+Install the backend dependencies:
 
+cd backend
 pip install -r requirements.txt
-
-This installs the required backend libraries, including the speech recognition, translation, API, and testing dependencies.
 
 3. Configure Environment Variables
 
-The repository contains:
+Inside the backend folder, create a file named:
 
-backend/.env.example
+.env
 
-Create a new file named:
+Use .env.example as the reference for the required environment variables.
 
-backend/.env
+Example:
 
-Copy the required configuration from .env.example into .env.
+# Add the required API/model configuration here.
+# Do not commit your real API keys to GitHub.
 
-The .env file is intentionally excluded from GitHub using .gitignore.
-
-Do not upload API keys or other private credentials to GitHub.
+Keep API keys and other secrets private.
 
 4. Start the Backend
 
-From the backend directory, run:
+From the backend directory:
 
 python -m uvicorn main:app --reload
 
-If the backend starts successfully, it will be available at:
+The backend will normally be available at:
 
 http://127.0.0.1:8000
 
-FastAPI API documentation is available at:
+Swagger API Documentation
+
+Open:
 
 http://127.0.0.1:8000/docs
 
-Keep this terminal running.
+This provides an interactive interface for testing the backend APIs.
 
-💻 Frontend Setup
+5. Start the Frontend
 
-Open a second terminal.
+Open a new terminal.
 
-Navigate to the frontend directory:
+Go to the frontend directory from the project root:
 
 cd frontend
-1. Install Frontend Dependencies
 
-Run:
+Install frontend dependencies:
 
 npm install
 
-This installs all required React and frontend dependencies.
-
-2. Start the Frontend
-
-Run:
+Start the development server:
 
 npm run dev
 
-The frontend will normally be available at:
+The terminal will display the local frontend URL, normally similar to:
 
-http://127.0.0.1:5173
+http://localhost:5173
 
-Open that address in a browser.
+Open that address in your browser.
 
-▶️ Running the Complete Application
+🎤 How to Use the Application
 
-Two terminals should be running simultaneously.
+Step 1 — Select a Language
 
-Terminal 1 — Backend
-cd backend
-venv\Scripts\activate
-python -m uvicorn main:app --reload
-Terminal 2 — Frontend
-cd frontend
-npm run dev
+Choose the language in which the artisan will describe the product:
 
-Then open the frontend in your browser:
+Hindi
 
-http://127.0.0.1:5173
+Gujarati
 
-The backend API documentation can be accessed through:
+Marathi
 
-http://127.0.0.1:8000/docs
-🎤 User Flow
+Step 2 — Provide the Product Description
 
-The module follows a simple voice-first workflow:
+The artisan can either:
 
-1. Select Input Language
-          ↓
-2. Speak or Upload Audio
-          ↓
-3. Process Audio
-          ↓
-4. Speech Converted to Text
-          ↓
-5. Translation / Text Processing
-          ↓
-6. AI Generates Catalog
-          ↓
-7. View Hindi & English Catalog
+🎙️ Record speech using the microphone, or
 
-This minimizes the amount of typing required from the artisan.
+📁 Upload an existing audio file.
 
-🎯 Purpose
+Step 3 — Process the Audio
 
-The purpose of this module is to make digital catalog creation more accessible to artisans by reducing the need for manual typing and technical knowledge.
+The system transcribes the audio and processes the resulting text.
 
-Instead of manually entering product information, an artisan can simply speak about their product in Hindi, Gujarati, or Marathi.
+Step 4 — Generate the Catalog
 
-The system processes the speech and generates a structured product catalog in Hindi and English.
+The AI extracts the relevant product information and creates a structured catalog.
 
-This makes catalog creation faster, simpler, and more accessible for artisans participating in digital commerce.
+Step 5 — View the Result
+
+The final product information is displayed in Hindi and English.
+
+🎯 Purpose of the Module
+
+This module focuses specifically on reducing the technical and language barriers involved in digital catalog creation.
+
+Instead of requiring artisans to type and manually prepare product information, they can simply speak about their product in their preferred supported language.
+
+The system then transforms that natural speech into structured, bilingual catalog content suitable for digital commerce.
 
 🏆 SIH Project Module
 
-This repository contains the Multilingual Voice Cataloguer module developed as part of a larger Smart India Hackathon (SIH) solution for enabling digital commerce for marginalized artisans.
+This repository contains the multilingual voice and AI cataloging module of the larger Smart India Hackathon solution.
 
-This repository focuses specifically on the multilingual voice-based catalog creation component.
+The broader solution is intended to help marginalized artisans gain better access to digital markets and year-round commerce.
 
-The module can be integrated with the larger artisan marketplace application through its frontend and backend APIs.
+This repository specifically focuses on:
+
+Voice-based product information collection
+
+Multilingual speech recognition
+
+Translation
+
+AI-powered catalog generation
+
+Hindi and English catalog output
+
+Other modules of the larger solution, such as image enhancement and dynamic pricing, are outside the scope of this repository.
+
+🔮 Future Improvements
+
+Possible future enhancements include:
+
+More regional Indian languages
+
+Better handling of regional accents and dialects
+
+Offline or low-connectivity support
+
+Improved speech recognition for noisy environments
+
+Product image integration
+
+Automatic catalog export
+
+Direct e-commerce marketplace integration
+
+QR-based product storytelling
+
+🔐 Security Notes
+
+Never commit API keys or passwords.
+
+Keep .env files out of version control.
+
+Do not upload sensitive personal information.
+
+Validate uploaded audio files before processing.
+
+Apply appropriate authentication and authorization when deploying the application publicly.
+
+📌 Repository
+
+GitHub:
+https://github.com/Anushka-ctrl365/multilingual-voice-cataloguer
 
 👩‍💻 Module Focus
-Input
 
-🎙️ Hindi speech
-🎙️ Gujarati speech
-🎙️ Marathi speech
-📁 Uploaded audio files
+Multilingual Voice Input + AI Catalog Generation
 
-Processing
+Input: Hindi, Gujarati, Marathi
+Output: Hindi, English
 
-🗣️ Speech-to-Text
-🔄 Multilingual Translation
-🤖 AI-based Catalog Generation
-
-Output
-
-🇮🇳 Hindi Product Catalog
-🇬🇧 English Product Catalog
-
-📌 Future Improvements
-
-Potential future enhancements include:
-
-Support for additional Indian languages
-Improved speech recognition for regional accents
-Offline or edge-based speech processing
-More customizable catalog fields
-Integration with online artisan marketplaces
-Voice-based editing of generated catalogs
-Improved handling of noisy audio recordings
-Improved multilingual speech recognition accuracy
-🔒 Security Notes
-Do not commit .env files to GitHub.
-Do not expose API keys in source code.
-Keep private credentials in environment variables.
-The provided .env.example file can be used as a template for local configuration.
+Built as part of a Smart India Hackathon project focused on empowering marginalized artisans through accessible digital tools.
