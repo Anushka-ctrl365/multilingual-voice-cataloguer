@@ -97,7 +97,7 @@ The generated catalog organizes the artisan's information into useful product fi
             Hindi Output   English Output
 
 ```
-## 🗣️ Language Support
+### 🗣️ Language Support
 
 | Input Language | Output Language |
 |---|---|
@@ -109,10 +109,11 @@ The generated catalog organizes the artisan's information into useful product fi
 | Marathi 🇮🇳 | English 🇬🇧 |
 
 
-## 🧠 AI Pipeline
+### 🧠 AI Pipeline
 
 The module uses a multi-stage AI pipeline.
 
+```text
 1. Speech-to-Text
 
 The artisan's voice input is converted into text using Whisper / Faster-Whisper.
@@ -122,6 +123,9 @@ Audio
 Speech Recognition
   ↓
 Text
+
+```
+```text
 2. Translation
 
 When required, the recognized text is translated using IndicTrans2.
@@ -131,8 +135,11 @@ Gujarati / Marathi / Hindi
     IndicTrans2
         ↓
 Hindi / English
-3. Catalog Generation
+```
 
+### 3. Catalog Generation
+
+```text
 The processed text is passed to the catalog generation component, which extracts relevant product information and produces a structured catalog.
 
 Product Description
@@ -140,7 +147,9 @@ Product Description
    AI Processing
         ↓
 Structured Catalog
-🛠️ Technology Stack
+```
+
+## 🛠️ Technology Stack
 Frontend
 React
 Vite
