@@ -95,15 +95,21 @@ The generated catalog organizes the artisan's information into useful product fi
                   ┌──────┴──────┐
                   ▼             ▼
             Hindi Output   English Output
-🗣️ Language Support
-Input Language	Output Language
-Hindi 🇮🇳	Hindi 🇮🇳
-Hindi 🇮🇳	English 🇬🇧
-Gujarati 🇮🇳	Hindi 🇮🇳
-Gujarati 🇮🇳	English 🇬🇧
-Marathi 🇮🇳	Hindi 🇮🇳
-Marathi 🇮🇳	English 🇬🇧
-🧠 AI Pipeline
+
+
+## 🗣️ Language Support
+
+| Input Language | Output Language |
+|---|---|
+| Hindi 🇮🇳 | Hindi 🇮🇳 |
+| Hindi 🇮🇳 | English 🇬🇧 |
+| Gujarati 🇮🇳 | Hindi 🇮🇳 |
+| Gujarati 🇮🇳 | English 🇬🇧 |
+| Marathi 🇮🇳 | Hindi 🇮🇳 |
+| Marathi 🇮🇳 | English 🇬🇧 |
+
+
+## 🧠 AI Pipeline
 
 The module uses a multi-stage AI pipeline.
 
@@ -150,7 +156,8 @@ AI/LLM-based catalog generation
 Testing
 Pytest
 FastAPI Test Client
-📁 Project Structure
+
+## 📁 Project Structure
 multilingual-voice-cataloguer/
 │
 ├── backend/
@@ -219,7 +226,7 @@ Git
 
 You also need an internet connection during the initial setup so that Python and frontend dependencies can be downloaded.
 
-⚙️ Backend Setup
+## ⚙️ Backend Setup
 
 Open a terminal in the project directory.
 
@@ -323,7 +330,7 @@ http://127.0.0.1:5173
 The backend API documentation can be accessed through:
 
 http://127.0.0.1:8000/docs
-🎤 User Flow
+## 🎤 User Flow
 
 The module follows a simple voice-first workflow:
 
@@ -343,7 +350,7 @@ The module follows a simple voice-first workflow:
 
 This minimizes the amount of typing required from the artisan.
 
-🎯 Purpose
+## 🎯 Purpose
 
 The purpose of this module is to make digital catalog creation more accessible to artisans by reducing the need for manual typing and technical knowledge.
 
@@ -354,7 +361,7 @@ The system processes the speech and generates a structured product catalog in Hi
 This makes catalog creation faster, simpler, and more accessible for artisans participating in digital commerce.
 
 
-👩‍💻 Module Focus
+## 👩‍💻 Module Focus
 Input
 
 🎙️ Hindi speech
@@ -373,7 +380,7 @@ Output
 🇮🇳 Hindi Product Catalog
 🇬🇧 English Product Catalog
 
-📌 Future Improvements
+## 📌 Future Improvements
 
 Potential future enhancements include:
 
